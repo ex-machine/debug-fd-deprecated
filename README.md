@@ -10,14 +10,15 @@ Particularly useful for the users of JetBrains IntelliJ IDEA, PhpStorm, WebStorm
 
 ## Description
 
-The package patches Node.js util.deprecate in safe manner to keep it silent about `DEBUG_FD`.
+The package patches Node.js `util.deprecate` in safe manner to keep it silent about `DEBUG_FD`.
 
 ## Use
 
-`debug-fd-deprecated` should be loaded before `debug` or any other package that uses it:
+`debug-fd-deprecated` should be loaded once, before `debug` or any other package that uses it:
 
 ```js
+'use strict';
 require('debug-fd-deprecated');
 ...
-require('body-parser');
+const bodyParser = require('body-parser');
 ```
