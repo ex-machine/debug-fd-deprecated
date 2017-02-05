@@ -1,0 +1,19 @@
+{
+  "name": "debug-fd-deprecated",
+  "version": "1.0.0",
+  "description": "Fixes '`DEBUG_FD` is deprecated. Override `debug.log` if you want to use a different log function' error",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-machine/debug-fd-deprecated.git"
+  },
+  "keywords": [
+    "debug"
+  ],
+  "author": "bisubus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ex-machine/debug-fd-deprecated/issues"
+  },
+  "homepage": "https://github.com/ex-machine/debug-fd-deprecated"
+}
