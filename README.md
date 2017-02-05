@@ -14,11 +14,24 @@ The package patches Node.js `util.deprecate` in safe manner to keep it silent ab
 
 ## Use
 
-`debug-fd-deprecated` should be loaded once, before `debug` or any other package that uses it:
+`debug-fd-deprecated` should be loaded once per process, before `debug` or any other package that uses it:
 
 ```js
 'use strict';
 require('debug-fd-deprecated');
+...
+const bodyParser = require('body-parser');
+```
+
+If it is known that `process.env.DEBUG_FD` is enabled only from the environment before Node.js start (like it happens with JetBrains IDEs), `debug-fd-deprecated` can be made conditional:
+
+
+```js
+'use strict';
+
+if ('DEBUG_FD' in process.env) {
+  require('debug-fd-deprecated');
+}
 ...
 const bodyParser = require('body-parser');
 ```
