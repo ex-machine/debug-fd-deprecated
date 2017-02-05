@@ -1,6 +1,6 @@
 {
   "name": "debug-fd-deprecated",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fixes '`DEBUG_FD` is deprecated. Override `debug.log` if you want to use a different log function' error",
   "main": "index.js",
   "repository": {
